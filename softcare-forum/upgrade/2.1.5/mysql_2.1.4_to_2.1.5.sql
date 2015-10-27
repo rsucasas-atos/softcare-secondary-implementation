@@ -130,7 +130,7 @@ CREATE TABLE jforum_banner (
 	banner_width INT NOT NULL DEFAULT '0',
 	banner_height INT NOT NULL DEFAULT '0',
 	KEY(banner_id)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 --
 -- Table structure for table 'jforum_forums_watch'
@@ -142,4 +142,4 @@ CREATE TABLE jforum_forums_watch (
   is_read tinyint(1) DEFAULT 1,
   INDEX idx_fw_forum (forum_id),
   INDEX idx_fw_user (user_id)
-) TYPE=InnoDB;
+) Engine=InnoDB;

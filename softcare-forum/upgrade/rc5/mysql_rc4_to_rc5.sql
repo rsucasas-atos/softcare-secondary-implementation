@@ -6,7 +6,7 @@ CREATE TABLE jforum_posts_text (
 	post_id MEDIUMINT(8) NOT NULL PRIMARY KEY,
 	post_text TEXT,
 	post_subject VARCHAR(100)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 INSERT INTO jforum_posts_text (post_id, post_text, post_subject) SELECT post_id, post_text, post_subject FROM jforum_posts;
 
@@ -21,7 +21,7 @@ CREATE TABLE jforum_privmsgs_text (
 	privmsgs_id MEDIUMINT(8) NOT NULL,
 	privmsgs_text TEXT,
 	PRIMARY KEY ( privmsgs_id )
-) Type=InnoDB;
+) Engine=InnoDB;
 
 INSERT INTO jforum_privmsgs_text ( privmsgs_id, privmsgs_text ) SELECT privmsgs_id, privmsgs_text FROM jforum_privmsgs;
 
@@ -42,7 +42,7 @@ CREATE TABLE jforum_search_words (
   word_hash INT,
   KEY(word),
   KEY(word_hash)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 INSERT INTO jforum_search_words ( word_id, word, word_hash ) SELECT word_id, word, word_hash FROM jforum_tmp;
 DROP TABLE jforum_tmp;
 
@@ -54,7 +54,7 @@ CREATE TABLE jforum_search_wordmatch (
   KEY(post_id),
   KEY(word_id),
   KEY(title_match)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 INSERT INTO jforum_search_wordmatch ( post_id, word_id, title_match ) SELECT post_id, word_id, title_match FROM jforum_tmp;
 DROP TABLE jforum_tmp;
 
@@ -64,6 +64,6 @@ CREATE TABLE jforum_search_results (
   session VARCHAR(50),
   time DATETIME,
   KEY (topic_id)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 INSERT INTO jforum_search_results ( topic_id, session, time ) SELECT topic_id, session, time FROM jforum_tmp;
 DROP TABLE jforum_tmp;

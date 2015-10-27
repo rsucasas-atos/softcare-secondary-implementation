@@ -23,7 +23,7 @@ CREATE TABLE jforum_karma (
 	KEY(topic_id),
 	KEY(post_user_id),
 	KEY(from_user_id)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 --
 -- Table structure for table 'jforum_bookmark'
@@ -39,7 +39,7 @@ CREATE TABLE jforum_bookmarks (
 	description varchar(255),
 	INDEX book_idx_relation (relation_id),
 	KEY(user_id)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 -- 
 -- Table structure for table 'jforum_quota_limit'
 --
@@ -49,7 +49,7 @@ CREATE TABLE jforum_quota_limit (
 	quota_desc VARCHAR(50) NOT NULL,
 	quota_limit INT NOT NULL,
 	quota_type TINYINT(1) DEFAULT '1'
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 --
 -- Table structure for table 'jforum_extension_groups'
@@ -61,7 +61,7 @@ CREATE TABLE jforum_extension_groups (
 	allow TINYINT(1) DEFAULT '1', 
 	upload_icon VARCHAR(100),
 	download_mode TINYINT(1) DEFAULT '1'
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 -- 
 -- Table structure for table 'jforum_extensions'
@@ -75,7 +75,7 @@ CREATE TABLE jforum_extensions (
 	extension VARCHAR(10),
 	allow TINYINT(1) DEFAULT '1',
 	KEY(extension_group_id)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 --
 -- Table structure for table 'jforum_attach'
@@ -89,7 +89,7 @@ CREATE TABLE jforum_attach (
 	INDEX idx_att_post(post_id),
 	INDEX idx_att_priv(privmsgs_id),
 	INDEX idx_att_user(user_id)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 -- 
 -- Table structure for table 'jforum_attach_desc'
@@ -109,7 +109,7 @@ CREATE TABLE jforum_attach_desc (
 	extension_id INT,
 	INDEX idx_att_d_att(attach_id),
 	INDEX idx_att_d_ext(extension_id)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 --
 -- Table structure for table 'jforum_attach_quota'
@@ -120,4 +120,4 @@ CREATE TABLE jforum_attach_quota (
 	group_id INT NOT NULL,
 	quota_limit_id INT NOT NULL,
 	KEY(group_id)
-) TYPE=InnoDB;
+) Engine=InnoDB;

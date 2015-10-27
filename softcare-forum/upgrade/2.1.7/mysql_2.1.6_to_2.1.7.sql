@@ -7,7 +7,7 @@ CREATE TABLE jforum_banlist (
   PRIMARY KEY  (banlist_id),
   INDEX idx_user (user_id),
   INDEX (banlist_ip)
-) TYPE=InnoDB;
+) Engine=InnoDB;
 
 ALTER TABLE jforum_users ADD COLUMN user_authhash VARCHAR(32);
 ALTER TABLE jforum_users ADD COLUMN user_notify_always TINYINT(1) DEFAULT '0';
