@@ -1,3 +1,11 @@
+body
+{
+	background-color: #fff;
+	background-image: url("../images/bg.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
 img { border: 0px; }
 font, th, td, p { font-family: verdana, arial, helvetica, sans-serif; }
 
@@ -24,7 +32,7 @@ td.row3announce { background-color: #d1d7dc; }
 td.row3sticky { background-color: #d1d7dc; }
 td.rowpic { background-image:  url(../images/cellpic2.jpg); background-repeat: repeat-y; background-color: #ffffff }
 
-th { font-weight: bold; font-size: 11px; background-image:  url(../images/cellpic3.gif); color: #ffa34f; height: 25px; background-color: #01336b }
+th { font-weight: bold; font-size: 11px;  color: #fff; height: 25px; background-color: #a7a7a7 } /* color: #ffa34f; background-image:  url(../images/cellpic3.gif); background-color: #01336b */
 td.cat { border-right: #ffffff solid; border-top: #ffffff solid; background-image:  url(../images/cellpic1.gif); border-left: #ffffff solid; border-bottom: #ffffff solid; height: 28px; background-color: #dfdfdf }
 td.cathead { border-right: #ffffff solid; border-top: #ffffff solid; background-image:  url(../images/cellpic1.gif); border-left: #ffffff solid; border-bottom: #ffffff solid; height: 28px; background-color: #dfdfdf }
 td.catsides { border-right: #ffffff solid; border-top: #ffffff solid; background-image:  url(../images/cellpic1.gif); border-left: #ffffff solid; border-bottom: #ffffff solid; height: 28px; background-color: #dfdfdf }
